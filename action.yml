@@ -1,4 +1,11 @@
 # action.yml
+name: 'Install Python'
+description: 'Install python from the tools cache'
+uses: actions/setup-python@v1
+	with:
+		python-version: '3.x'
+		architecture: 'x64'
+
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
@@ -14,3 +21,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.who-to-greet }}
+
