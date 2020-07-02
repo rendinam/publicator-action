@@ -1,5 +1,5 @@
 # action.yml
-name: 'Pub-2-PyPI'
+name: 'Publish to PyPI'
 description: 'Publish a package to PyPI after performing some customizeable checks.'
 runs:
   using: 'docker'
