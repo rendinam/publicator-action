@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
 echo "--Entrypoint begin"
-pwd
+echo "Custom working directory: $(pwd)"
 
 REF=$GITHUB_REF
 echo "This is the string from GITHUB_REF env var: ${REF}"
