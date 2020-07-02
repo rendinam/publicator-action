@@ -2,7 +2,7 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:  # id of input
+  git_tag:  # id of input
     description: 'Print this string'
     required: true
     default: 'World'
