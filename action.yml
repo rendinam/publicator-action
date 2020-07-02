@@ -1,17 +1,17 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
-inputs:
-  git_tag:  # id of input
-    description: 'Print this string'
-    required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+name: 'Pub-2-PyPI'
+description: 'Publish a package to PyPI after performing some customizeable checks.'
+#inputs:
+#  git_tag:  # id of input
+#    description: 'Print this string'
+#    required: true
+#    default: 'World'
+#outputs:
+#  time: # id of output
+#    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.git_tag }}
+#  args:
+#    - ${{ inputs.git_tag }}
 

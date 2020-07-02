@@ -1,13 +1,15 @@
 #!/bin/sh -l
 
-git_tag="${1}"
-echo "This is the string provided as argument: ${git_tag}"
+echo "--Entrypoint begin"
+pwd
 
-echo "This is the string from GITHUB_REF env var: ${GITHUB_REF}"
+REF=$GITHUB_REF
+echo "This is the string from GITHUB_REF env var: ${REF}"
 
 PYTHON=$(which python3)
-$PYTHON /validate_version.py ${git_tag}
+$PYTHON /validate_version.py ${REF}
 
 time=$(date)
 echo "::set-output name=time::$time"
+echo "--Entrypoint end"
 
