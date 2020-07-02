@@ -7,10 +7,8 @@ REF=$GITHUB_REF
 echo "This is the string from GITHUB_REF env var: ${REF}"
 
 PYTHON=$(which python3)
-PIP=$(which pip)
+PIP=$(which pip3)
 echo "PIP=${PIP}"
-PIP3=$(which pip3)
-echo "PIP3=${PIP3}"
 
 $PYTHON --version
 $PYTHON /validate_version.py ${REF}
