@@ -5,6 +5,7 @@ FROM ubuntu:18.04
 #RUN apk add python3 git gcc gfortran
 RUN apt-get update && apt-get install -y \
   build-essential \
+  python3-pip \
   python3.6
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
