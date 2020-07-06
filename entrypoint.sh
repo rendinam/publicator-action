@@ -2,6 +2,7 @@
 
 echo "--Entrypoint begin"
 echo "Custom working directory: $(pwd)"
+ls -al
 
 REF=$GITHUB_REF
 echo "This is the string from GITHUB_REF env var: ${REF}"
