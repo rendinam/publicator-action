@@ -1,8 +1,9 @@
 # Container image that runs your code
 #FROM alpine:3.10
-FROM ubuntu-latest
+FROM ubuntu
 
 #RUN apk add python3 git gcc gfortran
+RUN apt install python3 build-essential
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
