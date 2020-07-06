@@ -11,6 +11,8 @@ PYTHON=$(which python3)
 echo "PYTHON=${PYTHON}"
 PIP=$(which pip3)
 echo "PIP=${PIP}"
+GCC=$(which gcc)
+echo "GCC=${GCC}"
 
 $PYTHON --version
 $PYTHON /validate_version.py ${REF}
