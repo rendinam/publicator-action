@@ -13,8 +13,6 @@ PIP=$(which pip3)
 echo "PIP=${PIP}"
 GCC=$(which gcc)
 echo "GCC=${GCC}"
-echo "GCC version?"
-/usr/bin/gcc --version
 
 $PYTHON --version
 $PYTHON /validate_version.py ${REF}
