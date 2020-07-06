@@ -4,8 +4,7 @@ FROM ubuntu:18.04
 
 #RUN apk add python3 git gcc gfortran
 RUN apt-get update && apt-get install -y \
-python3 \
-build-essential
+  build-essential
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
