@@ -1,6 +1,6 @@
 # Container image that runs your code
 #FROM alpine:3.10
-FROM ubuntu:18.04
+FROM ubuntu-latest
 
 #RUN apk add python3 git gcc gfortran
 
