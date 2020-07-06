@@ -13,6 +13,8 @@ PIP=$(which pip3)
 echo "PIP=${PIP}"
 GCC=$(which gcc)
 echo "GCC=${GCC}"
+GIT=$(which git)
+echo "GIT=${GIT}"
 
 /usr/bin/python3 --version
 /usr/bin/gcc --version
@@ -29,8 +31,8 @@ echo "Install publication deps"
 $PIP install twine
 
 echo "Prepare for publication"
-git clean -fxd
-python setup.py build sdist --format=gztar
+$GIT clean -fxd
+$PYTHON setup.py build sdist --format=gztar
 
 echo "::set-output name=time::$time"
 echo "--Entrypoint end"
