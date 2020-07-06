@@ -28,8 +28,9 @@ $PIP install .
 echo "Install publication deps"
 $PIP install twine
 
-#echo "Prepare for publication 1"
-#git clean -fxd
+echo "Prepare for publication"
+git clean -fxd
+python setup.py build sdist --format=gztar
 
 echo "::set-output name=time::$time"
 echo "--Entrypoint end"
