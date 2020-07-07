@@ -1,6 +1,6 @@
-#!/bin/sh -l
+#!/bin/bash -l
 
-set -x
+set -e
 
 echo "--Entrypoint begin"
 echo "Custom working directory: $(pwd)"
