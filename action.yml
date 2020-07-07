@@ -1,6 +1,9 @@
 # action.yml
 name: 'Publish to PyPI'
 description: 'Publish a package to PyPI after performing some customizeable checks.'
+env:
+    TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
+    TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
 runs:
   using: 'docker'
   image: 'Dockerfile'
