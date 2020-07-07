@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
+set -x
+
 echo "--Entrypoint begin"
 echo "Custom working directory: $(pwd)"
 ls -al
