@@ -20,7 +20,6 @@ echo "GIT=${GIT}"
 /usr/bin/gcc --version
 
 $PYTHON --version
-$PYTHON /validate_version.py ${REF}
 
 time=$(date)
 
@@ -28,14 +27,16 @@ echo "Install package"
 $PIP install .
 
 echo "Install publication deps"
-$PIP install twine
-TWINE=$(which twine)
+$PIP install twine semver
+
+# Validate the version
+$PYTHON /validate_version.py ${REF}
 
 echo "Prepare for publication"
 $GIT clean -fxd
 $PYTHON setup.py build sdist --format=gztar
+TWINE=$(which twine)
 $TWINE upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 #echo "::set-output name=time::$time"
-#echo "--Entrypoint end"
-
+echo "--Entrypoint end"
