@@ -6,7 +6,11 @@ import semver
 
 print('*****************************')
 print('*****************************')
-print(f'Validation script argument: {sys.argv[1]}')
-print(os.listdir('.'))
+gitref = sys.argv[1]
+print(f'Validation script argument: {gitref}')
+tag = gitref.split('/')[-1]
+print(f'Tag: {tag}')
+version = semver.VersionInfo.parse(tag)
+print('Tag is a valid semver value.')
 print('*****************************')
 print('*****************************')
